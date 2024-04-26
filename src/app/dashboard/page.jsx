@@ -1,13 +1,35 @@
+"use client"
+
+import HeroDashboard from "@/components/dashboard/heroDashboard";
 import ProduckList from "@/components/dashboard/produkList";
-import { getProductData } from '@/libs/api-libs';
+import React, { useEffect, useState } from 'react';
 
 const Page = () => {
 
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            const response = await fetch('/api/products'); // Endpoint API lokal
+            const data = await response.json();
+            setProducts(data);
+        } catch (error) {
+        }
+    };
+
+    fetchData();
+  }, []);
+
     return (
-        <div>
-            <h1>Hi Sugeng</h1>
-            <ProduckList/>
-        </div>
+        <main className="flex flex-col gap-12">
+            <section>
+                <HeroDashboard/>
+            </section>
+        <section>
+            <ProduckList product={products}/>
+        </section>
+        </main>
     );
 };
 
