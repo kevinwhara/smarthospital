@@ -4,6 +4,7 @@ import Navbar from "@/components/landingPage/Navbar"
 import Testimonial from "@/components/landingPage/Testimoni"
 import WhyUs from "@/components/landingPage/WhyUs"
 import Footer from "@/components/landingPage/footer"
+import React from "react"
 
 const Page = () => {
   const namaPasien = { nama: 'kevin', umur: 12, beratBadan: 50, penyakit: 'batuk berdahak', idKamar: 111 }
