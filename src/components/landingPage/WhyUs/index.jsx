@@ -16,7 +16,7 @@ const WhyUs = () => {
                         <ReHeader title={'Mengapa Harus Kami?'} subTitle={'Kami menyediakan Layanan yang Nyaman dan Canggih'}/>
                     </div>
                     {/* card */}
-                    <div className="flex flex-row gap-10 justify-center">
+                    <div className="flex flex-row gap-10 justify-center ">
                         <WhyUsCard image={twentyFourHour} text={'Pelayanan'} textBr={'24 jam'}/>
                         <CardGreen image={mapsIcon} text={'Mudah'} textBr={'Ditemukan'}/>
                         <WhyUsCard image={medicineIcon} text={'Pesan'} textBr={'Obat'}/>
